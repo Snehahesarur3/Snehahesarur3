@@ -27,11 +27,7 @@ public class LoginTest {
 		loginpage = new LoginPage(driver);
 	}
 	
-	@DataProvider(name = "LoginData")
-	Object[][] getData() {
-		return null;
-		
-	}
+	
 	
 	//@Test()
 	@Test(priority = 1)
@@ -40,21 +36,21 @@ public class LoginTest {
 		Assert.assertEquals(loginpage.getTitleofPage(), expectedTitle);		
 	}
 	
-	//@Test
-	//void validlogintest() {
-		//loginpage.login("standard_user", "secret_sauce");
-		//Assert.assertTrue(driver.findElement(By.xpath("//div[.='Sauce Labs Backpack']")).isDisplayed());
-	//}
+	@Test
+	void validlogintest() {
+		loginpage.login("standard_user", "secret_sauce");
+		Assert.assertTrue(driver.findElement(By.xpath("//div[.='Sauce Labs Backpack']")).isDisplayed());
+	}
 	
-	@Test(dataProvider = "LoginData", priority = 2)
-		void validlogintest(String userName, String passWord) {
-			loginpage.login(userName, passWord);
-			try {
-				Assert.assertTrue(driver.findElement(By.xpath("//div[.='Sauce Labs Backpack']")).isDisplayed());
-			}	catch(NoSuchElementException e) {
-				System.out.println("Test case failed not able to locate");
-			}
-		}
+//	@Test(dataProvider = "LoginData", priority = 2)
+//		void validlogintest(String userName, String passWord) {
+//			loginpage.login(userName, passWord);
+//			try {
+//				Assert.assertTrue(driver.findElement(By.xpath("//div[.='Sauce Labs Backpack']")).isDisplayed());
+//			}	catch(NoSuchElementException e) {
+//				System.out.println("Test case failed not able to locate");
+//			}
+//		}
 	
 	@Test(enabled = false)
 	void invalidlogintest() {

@@ -6,8 +6,6 @@
       <class name="Test.Class.LoginTest">
         <methods>
           <include name="validlogintest"/>
-          <include name="invalidlogintest"/>
-          <include name="titletest"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>

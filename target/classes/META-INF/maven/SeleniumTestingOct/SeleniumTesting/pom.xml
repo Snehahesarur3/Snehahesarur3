@@ -128,11 +128,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>Besant</groupId>
-			<artifactId>SeleniumAutomastion</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<scope>test</scope>
